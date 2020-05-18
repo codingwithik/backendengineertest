@@ -1,14 +1,13 @@
 package com.example.BackendEngineerTest.entities;
 
 
-import java.sql.Timestamp;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -34,8 +33,7 @@ public class User {
 	@Column(length = 2)
 	private String age;
 	
-	@CreationTimestamp
-	private Timestamp timestamp;
+	private String timestamp;
 	
 	
 }

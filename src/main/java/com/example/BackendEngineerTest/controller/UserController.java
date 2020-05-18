@@ -1,6 +1,6 @@
 package com.example.BackendEngineerTest.controller;
 
-import java.sql.Timestamp;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +54,7 @@ public class UserController {
 	@GetMapping("/v1/filter/{providerId}")
 	public List<User> filter(@PathVariable String providerId, @RequestParam(value = "name", required = false) String name, 
 			@RequestParam(value = "age", required = false) String age,  
-			@RequestParam(value = "timestamp", required = false) Timestamp timestamp) {
+			@RequestParam(value = "timestamp", required = false) String timestamp) {
 		
 		String[] params = new String[] {providerId , "Provider" };
 		
