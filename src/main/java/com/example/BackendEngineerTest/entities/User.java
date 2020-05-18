@@ -31,9 +31,9 @@ public class User {
 	private String name;
 	
 	@Column(length = 2)
-	private String age;
+	private Integer age;
 	
-	private String timestamp;
+	private Long timestamp;
 	
 	
 }

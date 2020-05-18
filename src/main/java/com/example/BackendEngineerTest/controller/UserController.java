@@ -53,14 +53,15 @@ public class UserController {
 	
 	@GetMapping("/v1/filter/{providerId}")
 	public List<User> filter(@PathVariable String providerId, @RequestParam(value = "name", required = false) String name, 
-			@RequestParam(value = "age", required = false) String age,  
-			@RequestParam(value = "timestamp", required = false) String timestamp) {
+			@RequestParam(value = "age", required = false) Integer age,  
+			@RequestParam(value = "timestamp", required = false) Long timestamp) {
 		
 		String[] params = new String[] {providerId , "Provider" };
 		
 		 providerService.findByProviderId(providerId).orElseThrow(() -> new NotFoundException(
 				messageSource.getMessage("not.found", params, LocaleContextHolder.getLocale())));
 		 
+			 
 		 User filter = new User();
 		 filter.setName(name);
 		 filter.setAge(age);
